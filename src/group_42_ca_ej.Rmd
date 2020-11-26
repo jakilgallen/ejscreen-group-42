@@ -17,11 +17,12 @@ ces <- read_csv(here("data", "ces3demographics.csv")) %>%
   clean_names()
 ```
 
+
 ```{r}
 ggplot(data = ces, aes(x = white_percent , y = ces_3_0_score)) +
   geom_hex() +
-  labs(x = "% White Population (2010)", y = "CES 3.0 Score") +
-  scale_fill_gradient(low = "darkorchid4", high = "magenta") +
+  labs(x = "% White Population", y = "CES 3.0 Score", title = "Comparison of CES 3.0 Score by Percent White Population from the 2010 Census") +
+  scale_fill_gradient(low = "navy", high = "orange") +
   theme_minimal()
 ```
 
