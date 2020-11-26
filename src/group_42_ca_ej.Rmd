@@ -1,0 +1,24 @@
+---
+title: "Group 42 CA pollution burden"
+author: "Mariano Viz, Joseph Kilgallen"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(here)
+library(janitor)
+```
+
+Add a new code chunk, and read in the ces3demographics.csv data as an object called ces using a relative file path (with here) pointing to the file in the data folder within the project. Pipe directly into janitor::clean_names() to convert column headers to lower snake case (the default).
+Save your .Rmd (do not knit)
+Stage, commit, pull, then push to GitHub
+In the GitHub repo, add your partner as a collaborator (you’ll want to ask them for their GitHub account or associated email to find them) by: Settings > Manage Access > Invite
+Send them a message letting them know you’ve sent the invite
+
+```{r}
+ces <- read_csv(here("data", "ces3demographics.csv")) %>% 
+  clean_names()
+```
+
